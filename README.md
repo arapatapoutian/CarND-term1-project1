@@ -6,23 +6,21 @@ Ara Patapoutian, June 12 2017
 
 #### Overview
 
-When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
-
-In this project lane lines are detected in images using Python and OpenCV.  
-
-This project includes  a file containing project code and a file containing a brief write up explaining the solution. The code file is called P1.ipynb and the write-up template is writeup_p1.md 
-
-To meet specifications in the project, take a look at the requirements in the project rubric
+- In this project the goal is to develop an algorithm  to detect lane lines
+  - Lane lines are detected in images using Python and OpenCV
+- In addition to this file, the project includes a file containing project code
+  - The code file is called P1.ipynb
+- The specifications in the project are listed [here](https://review.udacity.com/#!/rubrics/322/view)
 
 
 
-**Finding Lane Lines on the Road**
 
 There are four  steps in  this project:
-1. Make a pipeline that finds lane-lines on the road given test **images** provided
-2. Apply the same procedure on **movie clips**
-3. **Improve** **draw_lines()** such that a **single** lane-line represents a lane
-4. **Further modifications** to process the challenge clip
+
+1. Find lane-lines on the road given the provided test images
+2. Apply the same procedure on movie clips
+3. Improve **draw_lines()** function such that a lane is presented by a single line
+4. Do further modifications to process the challenge clip
 
 ---
 
@@ -31,14 +29,17 @@ There are four  steps in  this project:
 ### 1. Pipeline description
 
 - The pipeline flow is similar to the one described in class. Here are a sequence of plots to show intermediate steps
-- ![](image.png)
-- Added some helper functions
-  - *get_image()* takes an integer and returns an image
-  - *get_vertices()* takes the coordinate offsets and returns mask vertices
-  - *plot_images()* plots intermediate images to better understand what is going on
-- Defined most of my parameters outside the pipeline so that it is easily modified . As a result there is a single pipeline function that addresses all situations in this project
-  - for example, different *draw_lines()* algorithms were controlled through the *advanced* flag outside pipeline
-  - also, to address the challenge video,  the mask vertices were changed outside the pipeline
+
+![](image.png)
+
+Added some helper functions
+- *get_image()* takes an integer and returns an image
+- *get_vertices()* takes the coordinate offsets and returns mask vertices
+- *plot_images()* plots intermediate images to better understand what is going on
+
+Defined most of my parameters outside the pipeline so that it is easily modified . As a result there is a single pipeline function that addresses all situations in this project
+- for example, different *draw_lines()* algorithms were controlled through the *advanced* flag outside pipeline
+- also, to address the challenge video,  the mask vertices were changed outside the pipeline
 
 ### 2. *draw_lines()* modifications###
 
