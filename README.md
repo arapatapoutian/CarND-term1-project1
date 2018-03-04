@@ -41,7 +41,7 @@ Defined most of my parameters outside the pipeline so that it is easily modified
 - for example, different *draw_lines()* algorithms were controlled through the *advanced* flag outside pipeline
 - also, to address the challenge video,  the mask vertices were changed outside the pipeline
 
-### 2. *draw_lines()* modifications###
+### 2. *draw_lines()* modifications
 
 * The following modifications were applied to *draw_lines()* function:
   1.  For each Hough line determine 
