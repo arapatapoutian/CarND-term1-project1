@@ -62,7 +62,7 @@ Defined most of my parameters outside the pipeline so that it is easily modified
      * could have weighed with the square of the magnitude as well
   4. Finally, to address the challenge clip, I also used a basic time-filter, where if no lines were detected for a right or a left lane, I used the previously determined line coordinates
 
-### 3. Identify potential shortcomings with your current pipeline###
+### 3. Identify potential shortcomings with your current pipeline
 
 * As was observed from the challenge clip, that when the region of interest is small, there may not be enough long lines to identify a lane. The present algorithm does not do great job when the lane lines are not continuous, further apart and at a sharp turn 
 * The pipeline was tested on a very limited set of images / videos. The parameters chosen will probably fail on other images / clips. 
